@@ -48,8 +48,8 @@ public abstract class HttpService {
                 onSuccess(rsobj);
             }else{
                 JSONObject fail=new JSONObject();
-                fail.put("status","0");
-                fail.put("msg","fail");
+                fail.put("success","0");
+                fail.put("data","fail");
                 onFail(fail);
             }
 
@@ -57,8 +57,8 @@ public abstract class HttpService {
             e.printStackTrace();
             try {
                 JSONObject fail = new JSONObject();
-                fail.put("status", "0");
-                fail.put("msg", e.getMessage());
+                fail.put("success", "0");
+                fail.put("data", e.getMessage());
                 onFail(fail);
             }catch (Exception ie){
                 ie.printStackTrace();
@@ -83,16 +83,16 @@ public abstract class HttpService {
                 onSuccess(rsobj);
             }else{
                 JSONObject fail=new JSONObject();
-                fail.put("status","0");
-                fail.put("msg","fail");
+                fail.put("success","0");
+                fail.put("data","fail");
                 onFail(fail);
             }
         } catch (Exception e) {
                 e.printStackTrace();
             try {
                 JSONObject fail = new JSONObject();
-                fail.put("status", "0");
-                fail.put("msg", e.getMessage());
+                fail.put("success", "0");
+                fail.put("data", e.getMessage());
                 onFail(fail);
             }catch (Exception ie){
                  ie.printStackTrace();

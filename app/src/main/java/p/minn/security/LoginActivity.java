@@ -294,8 +294,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             userLoginService=new UserLoginService();
             List <NameValuePair> params=new ArrayList<NameValuePair>();
 
-            params.add(new BasicNameValuePair("username","minn"));
-            params.add(new BasicNameValuePair("password","123456"));
+            params.add(new BasicNameValuePair("username",name));
+            params.add(new BasicNameValuePair("password",password));
             userLoginService.post("j_spring_security_check",params);
         }
     }
